@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div th:if="${list!=null and !list.empty}">
+        <table class="table table-striped">
+            <thead>
+                <th>学生番号</th>
+                <th>学生名</th>
+                <th>入学年度</th>
+                <th>クラス番号</th>
+                <th>在学中フラグ</th>
+                <th>学校コード</th>
+                <th role="action"></th>
+            </thead>
+            <tbody>
+                <tr class="align-middle" th:each="student, stat : ${list}" th:object="${student}">
+                    <td th:text="${stat.count}"></td>
+                    <td th:text=""></td>
+                    <td th:text="{studentnumber}"></td>
+                    <td th:text="{name}"></td>
+                    <td th:text="{nyuugaku}"></td>
+                    <td th:text="{classnum}"></td>
+                    <td th:text="{zaigakuhuragu}"></td>
+                    <td th:text="{schoolnumber}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
