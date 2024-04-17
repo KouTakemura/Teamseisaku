@@ -5,11 +5,13 @@
    <meta charset="utf-8" />
  </head>
  <body>
+	 <form method="POST" class="index">
+  <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
    <h1>Hello Work!</h1>
    
 
-    <a href="/student/">学生情報</a>
+    <a href="/hyouji/">学生情報</a>
     <a href="/">一覧表示</a>
-
+	 </form>
  </body>
 </html>

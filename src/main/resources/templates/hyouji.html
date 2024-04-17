@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/kou" method="post" th.object="${studenthyou}">
+	  <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+	    <div>
+            <label for="name">学籍番号</label><br>
+            <input type="text" id="name" name="studentnumber" th.field="${studenthyou.studentnumber}">
+        </div>
+        <div>
+            <label for="name">名前</label><br>
+            <input type="text" id="name" name="name" th.field="${studenthyou.name}">
+        </div>
+     <div>
+            <label for="name">入学年度</label><br>
+            <input type="text" id="name" name="classnum" th.field="${studenthyou.nyuugaku}">
+        </div>
+        <div>
+            <label for="name">クラス番号</label><br>
+            <input type="text" id="name" name="classnum" th.field="${studenthyou.classnum}">
+        </div>
+        <div>
+            <label for="name">在学中フラグ</label><br>
+            <input type="text" id="name" name="zaigakuhuragu" th.field="${studenthyou.zaigakuhuragu}">
+        </div>
+        <div>
+            <label for="name">学校コード</label><br>
+            <input type="text" id="name" name="schoolnumber" th.field="${studenthyou.schoolnumber}">
+        </div>
+        <br>
+        <input type="submit" value="送信する">
+    </form>
+
+</body>
+</html>
